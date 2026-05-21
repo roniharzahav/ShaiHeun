@@ -13,8 +13,8 @@
     --accent: #8a1c1c;     /* deep oxblood — restrained, traditional */
     --accent-ink: #5e1010;
 
-    --font-serif: 'Frank Ruhl Libre', 'David Libre', Georgia, serif;
-    --font-sans: 'Heebo', 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Rubik', 'Secular One', system-ui, -apple-system, sans-serif;
+    --font-body: 'Assistant', 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
     --maxw: 1200px;
     --gutter: clamp(20px, 4vw, 56px);
@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
 body {
     background: var(--paper);
     color: var(--ink);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 17px;
     line-height: 1.65;
@@ -76,14 +76,14 @@ a { color: inherit; text-decoration: none; }
     line-height: 1;
 }
 .brand-mark {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.5px;
     color: var(--ink);
 }
 .brand-sub {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: 10px;
     letter-spacing: 4px;
     color: var(--muted);
@@ -170,7 +170,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-weight: 900;
     font-size: clamp(56px, 11vw, 168px);
     line-height: 0.95;
@@ -188,7 +188,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-lede {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: clamp(18px, 1.8vw, 22px);
     line-height: 1.55;
     color: var(--ink-soft);
@@ -239,7 +239,7 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     justify-content: center;
     color: var(--line);
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 15px;
     letter-spacing: 1px;
@@ -271,7 +271,7 @@ a { color: inherit; text-decoration: none; }
 .section-eyebrow.centered { text-align: center; }
 
 .section-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: clamp(36px, 5vw, 64px);
     line-height: 1.05;
@@ -281,7 +281,7 @@ a { color: inherit; text-decoration: none; }
 .section-title.centered { text-align: center; }
 
 .section-lede {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: clamp(17px, 1.4vw, 20px);
     color: var(--ink-soft);
     max-width: 700px;
@@ -291,7 +291,7 @@ a { color: inherit; text-decoration: none; }
 
 .prose p { margin-bottom: 18px; color: var(--ink-soft); }
 .prose .lede {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: 20px;
     line-height: 1.55;
     color: var(--ink);
@@ -344,7 +344,7 @@ a { color: inherit; text-decoration: none; }
     transform: scaleX(1);
 }
 .method-num {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 14px;
     color: var(--accent);
@@ -354,7 +354,7 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 18px;
 }
 .method-card h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 12px;
@@ -401,7 +401,7 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     justify-content: center;
     color: var(--line);
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 15px;
     letter-spacing: 1px;
@@ -416,7 +416,7 @@ a { color: inherit; text-decoration: none; }
 }
 .founder-portrait figcaption {
     margin-top: 18px;
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 18px;
 }
@@ -436,7 +436,7 @@ a { color: inherit; text-decoration: none; }
     border-inline-start: 2px solid var(--accent);
 }
 .pull-quote p {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-style: italic;
     font-size: clamp(20px, 2vw, 26px);
     line-height: 1.45;
@@ -460,7 +460,7 @@ a { color: inherit; text-decoration: none; }
     gap: 16px;
     padding: 22px 4px;
     border-bottom: 1px solid var(--line);
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: 18px;
     font-weight: 500;
     transition: padding-inline-start 0.25s ease;
@@ -469,7 +469,7 @@ a { color: inherit; text-decoration: none; }
     padding-inline-start: 12px;
 }
 .values-list li span {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: 11px;
     color: var(--accent);
     letter-spacing: 1px;
@@ -494,7 +494,7 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     justify-content: center;
     color: var(--line);
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 14px;
     letter-spacing: 1px;
@@ -562,7 +562,7 @@ a { color: inherit; text-decoration: none; }
     color: rgba(255,255,255,0.55);
 }
 .contact-list dd {
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     font-size: 20px;
 }
 .contact-list a { color: var(--paper); }
