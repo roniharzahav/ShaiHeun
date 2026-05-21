@@ -367,15 +367,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
-   FOUNDER
+   ABOUT (Story + Founder combined)
    ============================================================ */
-.section--founder {
+.section--about {
     background: linear-gradient(180deg, #efeae2 0%, #e8e2d8 100%);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     position: relative;
 }
-.section--founder::before {
+.section--about::before {
     content: '';
     position: absolute;
     top: 0;
@@ -383,17 +383,10 @@ a { color: inherit; text-decoration: none; }
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, var(--line) 20%, var(--line) 80%, transparent 100%);
 }
-.grid-founder {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: clamp(40px, 6vw, 96px);
-    align-items: center;
+.about-image {
+    text-align: center;
 }
-.founder-portrait { text-align: center; }
-.founder-portrait figure {
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-}
-.founder-frame {
+.about-image .founder-frame {
     aspect-ratio: 4 / 5;
     background: linear-gradient(135deg, var(--paper) 0%, #f0ebe3 100%);
     border: 1px solid var(--line);
@@ -406,21 +399,23 @@ a { color: inherit; text-decoration: none; }
     font-size: 15px;
     letter-spacing: 1px;
     position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
-.founder-frame::before {
+.about-image .founder-frame::before {
     content: '';
     position: absolute;
     inset: 20px;
     border: 1px solid var(--line);
     opacity: 0.6;
 }
-.founder-portrait figcaption {
+.about-caption {
     margin-top: 18px;
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 18px;
+    text-align: center;
 }
-.founder-portrait figcaption span {
+.about-caption span {
     display: block;
     font-weight: 400;
     font-size: 13px;
@@ -428,6 +423,15 @@ a { color: inherit; text-decoration: none; }
     margin-top: 4px;
     letter-spacing: 1px;
     direction: ltr;
+}
+.pull-quote cite {
+    display: block;
+    margin-top: 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-style: normal;
+    color: var(--muted);
+    letter-spacing: 1px;
 }
 
 .pull-quote {
@@ -525,6 +529,34 @@ a { color: inherit; text-decoration: none; }
     letter-spacing: 1px;
     font-style: italic;
 }
+.gallery-hidden {
+    display: none;
+}
+.gallery-grid.is-expanded .gallery-hidden {
+    display: flex;
+}
+.gallery-toggle {
+    display: block;
+    margin: 32px auto 0;
+    padding: 14px 36px;
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+.gallery-toggle:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+.gallery-toggle-less { display: none; }
+.gallery-grid.is-expanded + .gallery-toggle .gallery-toggle-more { display: none; }
+.gallery-grid.is-expanded + .gallery-toggle .gallery-toggle-less { display: inline; }
 
 /* ============================================================
    EVENTS
@@ -648,6 +680,66 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   SHOP
+   ============================================================ */
+.section--shop {
+    background: linear-gradient(180deg, var(--paper) 0%, #f1ece4 100%);
+}
+.shop-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+.shop-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 0 0 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.shop-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+.shop-image {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--paper-2) 0%, #e8e3da 100%);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--line);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    position: relative;
+}
+.shop-image::before {
+    content: '';
+    position: absolute;
+    inset: 16px;
+    border: 1px solid var(--line);
+    opacity: 0.5;
+}
+.shop-card h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0 24px;
+}
+.shop-card p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    padding: 0 24px;
+}
+
+/* ============================================================
    CONTACT
    ============================================================ */
 .contact-card {
@@ -741,6 +833,7 @@ a { color: inherit; text-decoration: none; }
     .grid-two { grid-template-columns: 1fr; }
     .grid-two-aside { position: static; }
     .grid-founder { grid-template-columns: 1fr; }
+    .shop-grid { grid-template-columns: repeat(2, 1fr); }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
     .gallery-item--wide { grid-column: span 2; }
     .gallery-item--tall { grid-row: span 1; }

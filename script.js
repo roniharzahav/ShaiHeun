@@ -35,11 +35,22 @@
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
+    // Gallery expand/collapse
+    const galleryToggle = document.getElementById('galleryToggle');
+    const galleryGrid = document.getElementById('galleryGrid');
+    if (galleryToggle && galleryGrid) {
+        galleryToggle.addEventListener('click', () => {
+            galleryGrid.classList.toggle('is-expanded');
+            const isExpanded = galleryGrid.classList.contains('is-expanded');
+            galleryToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        });
+    }
+
     // Reveal-on-scroll for sections
     const revealEls = document.querySelectorAll(
         '.section-title, .section-lede, .prose, .method-card, .values-list li, ' +
-        '.gallery-item, .pull-quote, .founder-portrait, .contact-card, .hero-title, ' +
-        '.hero-lede, .hero-meta, .eyebrow'
+        '.gallery-item, .pull-quote, .about-image, .contact-card, .hero-title, ' +
+        '.hero-lede, .hero-meta, .eyebrow, .event-card, .shop-card'
     );
     revealEls.forEach(el => el.classList.add('reveal'));
 
