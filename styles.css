@@ -180,7 +180,8 @@ a { color: inherit; text-decoration: none; }
 .hero-inner {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 680px;
+    margin-inline-start: auto;
 }
 
 .eyebrow {
@@ -263,7 +264,7 @@ a { color: inherit; text-decoration: none; }
 .hero-figure {
     position: absolute;
     inset-block: 0;
-    inset-inline-start: 0;
+    inset-inline-end: 0;
     width: 42%;
     min-width: 320px;
     z-index: 1;
