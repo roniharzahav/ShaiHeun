@@ -494,9 +494,7 @@ a { color: inherit; text-decoration: none; }
    VALUES
    ============================================================ */
 .values-block {
-    border-top: 1px solid var(--line);
     margin-top: clamp(48px, 6vw, 80px);
-    padding-top: clamp(48px, 6vw, 80px);
 }
 .values-list {
     list-style: none;
