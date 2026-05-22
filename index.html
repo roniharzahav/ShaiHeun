@@ -7,6 +7,41 @@
     <meta name="description" content="עמותת שאי-הון ישראל — שיטת לחימה ייחודית שפיתח אונשי סידני שלמה פייגה ז״ל. אומנות, דיסציפלינה ודרך חיים.">
     <meta name="keywords" content="שאי-הון, אומנויות לחימה, קארטה, ג׳ודו, סידני פייגה, רועי פייגה">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="שאי-הון — מרכז לאומנויות לחימה">
+    <meta property="og:description" content="עמותת שאי-הון ישראל — שיטת לחימה ייחודית שפיתח אונשי סידני שלמה פייגה ז״ל. אומנות, דיסציפלינה ודרך חיים.">
+    <meta property="og:image" content="https://shi-heun.com/hero.png">
+    <meta property="og:url" content="https://shi-heun.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="שאי-הון — מרכז לאומנויות לחימה">
+    <meta name="twitter:description" content="עמותת שאי-הון ישראל — שיטת לחימה ייחודית שפיתח אונשי סידני שלמה פייגה ז״ל.">
+    <meta name="twitter:image" content="https://shi-heun.com/hero.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "עמותת שאי-הון ישראל",
+      "description": "שיטת לחימה ייחודית שפיתח אונשי סידני שלמה פייגה ז״ל. אומנות, דיסציפלינה ודרך חיים.",
+      "url": "https://shi-heun.com",
+      "image": "https://shi-heun.com/hero.png",
+      "areaServed": "Israel",
+      "sport": ["Krav Maga", "Judo", "Karate", "Boxing", "Jiu-Jitsu"],
+      "founder": {
+        "@type": "Person",
+        "name": "אונשי סידני שלמה פייגה ז״ל"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Assistant:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,6 +49,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">דלג לתוכן</a>
 
 <header class="site-header" id="siteHeader">
     <div class="container header-inner">
@@ -37,7 +73,7 @@
     </div>
 </header>
 
-<main id="top">
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
@@ -59,7 +95,7 @@
         </div>
         <div class="hero-figure" aria-hidden="true">
             <div class="hero-figure-frame">
-                <img src="hero.png" alt="מתאמן שאי-הון" class="hero-img">
+                <img src="hero.png" alt="מתאמן שאי-הון בתנועת קראטה דינמית" class="hero-img" width="600" height="800" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -71,16 +107,16 @@
             <h2 class="section-title centered">רגעים מהמזרן.</h2>
 
             <div class="gallery-grid" id="galleryGrid">
-                <div class="gallery-item gallery-item--tall"><img src="gallery-3.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item"><img src="gallery-2.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item"><img src="gallery-1.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item"><img src="gallery-4.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item gallery-item--wide gallery-hidden"><img src="gallery-5.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden"><img src="gallery-6.jpg" alt="אימון שאי-הון" loading="lazy"></div>
-                <div class="gallery-item gallery-hidden"><img src="gallery-7.jpg" alt="אימון שאי-הון" loading="lazy"></div>
+                <div class="gallery-item gallery-item--tall"><img src="gallery-3.jpg" alt="מתאמן מבצע תנועת קראטה באולם האימונים" loading="lazy" width="400" height="600"></div>
+                <div class="gallery-item"><img src="gallery-2.jpg" alt="זוג מתאמנים באימון ג׳ודו על המזרן" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-1.jpg" alt="קבוצת מתאמנים בתרגול עמידות קרב" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-4.jpg" alt="מאמן מדגים טכניקת הגנה עצמית" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-item--wide gallery-hidden"><img src="gallery-5.jpg" alt="אימון קרב מגע קבוצתי" loading="lazy" width="800" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-6.jpg" alt="ילדים באימון שאי-הון ראשון" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-7.jpg" alt="מבחני דרגה — מתאמן מציג טכניקה" loading="lazy" width="400" height="300"></div>
             </div>
 
-            <button class="gallery-toggle" id="galleryToggle"><span class="gallery-toggle-more">הצג עוד</span><span class="gallery-toggle-less">הצג פחות</span></button>
+            <button class="gallery-toggle" id="galleryToggle" aria-label="הצג או הסתר תמונות נוספות בגלריה" aria-expanded="false" aria-controls="galleryGrid"><span class="gallery-toggle-more">הצג עוד</span><span class="gallery-toggle-less">הצג פחות</span></button>
         </div>
     </section>
 
@@ -141,7 +177,7 @@
                 <div class="grid-two-aside">
                     <div class="about-image">
                         <div class="founder-frame">
-                            <img src="founder.jpg" alt="אונשי סידני שלמה פייגה ז״ל">
+                            <img src="founder.jpg" alt="אונשי סידני שלמה פייגה ז״ל, מייסד שיטת שאי-הון" width="400" height="500">
                         </div>
                         <p class="about-caption">
                             <strong>אונשי סידני שלמה פייגה</strong>
@@ -168,6 +204,7 @@
                         שפיתחת ולהעביר אותן לכל תחומי החיים.״</p>
                         <cite>— אונשי סידני שלמה פייגה ז״ל</cite>
                     </blockquote>
+                    <a href="#contact" class="hero-cta" style="margin-top: 36px;">הצטרף לאימון</a>
                 </div>
             </div>
         </div>
@@ -240,35 +277,6 @@
         </div>
     </section>
 
-    <!-- SHOP -->
-    <section class="section section--shop" id="shop">
-        <div class="container">
-            <p class="section-eyebrow centered">חנות</p>
-            <h2 class="section-title centered">ציוד ומוצרים.</h2>
-            <p class="section-lede centered">
-                בקרוב — חגורות, חולצות אימון, ציוד הגנה ומוצרי שאי-הון מקוריים.
-            </p>
-
-            <ul class="shop-grid">
-                <li class="shop-card">
-                    <div class="shop-image"><span>חגורת אימון</span></div>
-                    <h3>חגורות שאי-הון</h3>
-                    <p>חגורות אימון איכותיות בכל הדרגות. בקרוב.</p>
-                </li>
-                <li class="shop-card">
-                    <div class="shop-image"><span>חולצת אימון</span></div>
-                    <h3>חולצות אימון</h3>
-                    <p>חולצות דרייפיט עם סמל השיטה. בקרוב.</p>
-                </li>
-                <li class="shop-card">
-                    <div class="shop-image"><span>ציוד הגנה</span></div>
-                    <h3>ציוד הגנה</h3>
-                    <p>כפפות, מגינים וציוד אימון מקצועי. בקרוב.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
     <!-- CONTACT -->
     <section class="section section--contact" id="contact">
         <div class="container grid-two">
@@ -281,23 +289,35 @@
             </div>
             <div class="grid-two-main contact-card">
                 <dl class="contact-list">
-                    <div>
-                        <dt>אימייל</dt>
-                        <dd><a href="mailto:info@shi-heun.com">info@shi-heun.com</a></dd>
-                    </div>
-                    <div>
-                        <dt>טלפון</dt>
-                        <dd><a href="tel:#">להשלמה</a></dd>
-                    </div>
-                    <div>
-                        <dt>כתובת</dt>
-                        <dd>להשלמה</dd>
-                    </div>
-                    <div>
-                        <dt>שעות אימון</dt>
-                        <dd>להשלמה</dd>
-                    </div>
+                    <dt>אימייל</dt>
+                    <dd><a href="mailto:info@shi-heun.com">info@shi-heun.com</a></dd>
+                    <dt>טלפון</dt>
+                    <dd><a href="tel:#">להשלמה</a></dd>
+                    <dt>כתובת</dt>
+                    <dd>להשלמה</dd>
+                    <dt>שעות אימון</dt>
+                    <dd>להשלמה</dd>
                 </dl>
+
+                <form class="contact-form" action="mailto:info@shi-heun.com" method="post" enctype="text/plain">
+                    <div class="form-row">
+                        <label for="contact-name">שם מלא</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contact-phone">טלפון</label>
+                        <input type="tel" id="contact-phone" name="phone" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contact-email">אימייל</label>
+                        <input type="email" id="contact-email" name="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="contact-message">הודעה</label>
+                        <textarea id="contact-message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="hero-cta" style="width: 100%; justify-content: center;">שלח הודעה</button>
+                </form>
             </div>
         </div>
     </section>
