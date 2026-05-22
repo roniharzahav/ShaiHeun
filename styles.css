@@ -267,30 +267,19 @@ a { color: inherit; text-decoration: none; }
 .hero-figure-frame {
     width: 100%;
     aspect-ratio: 3 / 4;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
     position: relative;
     overflow: hidden;
-}
-.hero-figure-placeholder {
-    position: absolute;
-    inset: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    color: rgba(255,255,255,0.2);
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 15px;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.06) 100%);
 }
-.hero-figure-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
-    opacity: 0.6;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
 }
 
 /* ============================================================
