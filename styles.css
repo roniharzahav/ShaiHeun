@@ -159,7 +159,7 @@ a { color: inherit; text-decoration: none; }
     min-height: 100dvh;
     min-height: 100svh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 .hero::before {
     content: '';
@@ -184,7 +184,7 @@ a { color: inherit; text-decoration: none; }
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     gap: clamp(40px, 6vw, 80px);
-    align-items: center;
+    align-items: start;
     width: 100%;
 }
 
