@@ -35,6 +35,14 @@
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
+    // Mark past events
+    document.querySelectorAll('[data-event-date]').forEach(card => {
+        const date = new Date(card.dataset.eventDate);
+        const now = new Date();
+        now.setHours(0,0,0,0);
+        if (date < now) card.classList.add('is-past');
+    });
+
     // Gallery expand/collapse
     const galleryToggle = document.getElementById('galleryToggle');
     const galleryGrid = document.getElementById('galleryGrid');
