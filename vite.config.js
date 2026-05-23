@@ -23,6 +23,14 @@ export default defineConfig({
         events: resolve(__dirname, 'src/pages/events.html'),
         shop: resolve(__dirname, 'src/pages/shop.html'),
         contact: resolve(__dirname, 'src/pages/contact.html')
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'assets/styles.css';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
       }
     },
     outDir: '../../dist',
