@@ -2,19 +2,40 @@
 
 ## Overview
 
-Convert the current single-page Shai-Heun website into a 7-page multi-page site using Vite with HTML partials (Handlebars) for shared components.
+Convert the current single-page Shai-Heun website into a **hybrid multi-page site**: a curated homepage with key sections, plus dedicated pages for detailed content. Built with Vite + HTML partials (Handlebars) for shared components.
 
 ## Page Structure
 
 | Page | Route | Content |
 |------|-------|---------|
-| Home | `/` | Hero, method preview (5 arts), "why train" section, CTA |
-| Gallery | `/gallery.html` | Full gallery grid with lightbox |
-| Locations | `/locations.html` | All 4 dojo cards + coach profiles |
-| Events | `/events.html` | Event list with dates |
-| Shop | `/shop.html` | Product cards with prices |
-| History | `/history.html` | Founder story, full about content, timeline |
-| Contact | `/contact.html` | Contact form + details |
+| **Home** | `/` | Hero, about teaser, method preview (5 arts), philosophy quote, contact CTA |
+| **About** | `/about.html` | Full founder story, history, pull quotes |
+| **Gallery** | `/gallery.html` | Full gallery grid with lightbox |
+| **Locations** | `/locations.html` | All 4 dojo cards + coach profiles |
+| **Events** | `/events.html` | Event list with dates |
+| **Shop** | `/shop.html` | Product cards with prices |
+| **Contact** | `/contact.html` | Full contact form + details |
+
+## Homepage Sections (in order)
+
+1. **Hero** — Full hero with animated mesh gradient, title, quote, CTA
+2. **About Teaser** — Short founder intro + "read more" link to About page
+3. **Method Preview** — Compact bento-grid showing the 5 martial arts (links to About page for full detail)
+4. **Philosophy Quote** — Large centered quote block
+5. **Contact CTA** — Dark banner with "join training" CTA linking to Contact page
+
+## Dedicated Page Content
+
+- **About**: Full founder biography, complete story text, pull quote, family lineage
+- **Gallery**: Full 7-image grid with expand/collapse + lightbox
+- **Locations**: All 4 location cards with coach info, addresses, phone, Waze links
+- **Events**: 3 event cards with dates, tags, descriptions
+- **Shop**: 3 product cards with placeholder images and prices
+- **Contact**: Full contact form (name, phone, email, message) + contact details sidebar
+
+## Removed Content
+
+- ~~Belt system section~~ — removed entirely
 
 ## Shared Components
 
@@ -23,17 +44,6 @@ All pages include these partials:
 - `partials/head.html` — Meta tags, fonts preload, CSS link, Open Graph base tags
 - `partials/nav.html` — Site header with active page highlighting via Handlebars conditional
 - `partials/footer.html` — Site footer with current year
-
-## Homepage Content
-
-The homepage is a curated landing page that pulls the most impactful content from across the site:
-
-1. **Hero** — Full hero section with animated mesh gradient, title, quote, CTA
-2. **Method Preview** — Compact bento-grid showing the 5 martial arts (links to History page for full detail)
-3. **"Why Train" / Philosophy** — Large quote block with founder's core message
-4. **CTA Banner** — Dark section with "join training" CTA
-
-Full method explanation, belt system, and detailed founder story live on their dedicated pages.
 
 ## Technical Architecture
 
@@ -47,11 +57,11 @@ Full method explanation, belt system, and detailed founder story live on their d
 ├── src/
 │   ├── pages/
 │   │   ├── index.html
+│   │   ├── about.html
 │   │   ├── gallery.html
 │   │   ├── locations.html
 │   │   ├── events.html
 │   │   ├── shop.html
-│   │   ├── history.html
 │   │   └── contact.html
 │   ├── partials/
 │   │   ├── head.html
