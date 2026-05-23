@@ -559,22 +559,22 @@ a { color: inherit; text-decoration: none; }
    METHOD — Bento Grid
    ============================================================ */
 .section--method {
-    background: var(--ink);
-    color: var(--paper);
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+    color: var(--ink);
     position: relative;
     overflow: hidden;
 }
-.section--method .section-eyebrow { color: var(--accent-bright); }
-.section--method .section-title { color: #fff; }
-.section--method .section-lede { color: rgba(255,255,255,0.6); }
+.section--method .section-eyebrow { color: var(--accent); }
+.section--method .section-title { color: var(--ink); }
+.section--method .section-lede { color: var(--ink-mid); }
 
 .section--method::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(155,27,27,0.1) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(184,148,31,0.05) 0%, transparent 50%);
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(155,27,27,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(184,148,31,0.04) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -583,11 +583,8 @@ a { color: inherit; text-decoration: none; }
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1px;
+    gap: 16px;
     margin-top: 48px;
-    background: rgba(255,255,255,0.06);
-    border-radius: var(--radius-md);
-    overflow: hidden;
     position: relative;
     z-index: 1;
 }
@@ -595,15 +592,17 @@ a { color: inherit; text-decoration: none; }
 .method-card {
     flex: 1 1 300px;
     max-width: 400px;
-    background: rgba(255,255,255,0.03);
+    background: var(--paper);
+    border: 1px solid var(--line);
     padding: 40px 32px;
-    transition: background 0.4s ease, transform 0.4s ease;
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
-    backdrop-filter: blur(4px);
+    border-radius: var(--radius-sm);
 }
 .method-card:hover {
-    background: rgba(255,255,255,0.07);
+    background: var(--paper-2);
     transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
 }
 .method-card::before {
     content: '';
@@ -623,13 +622,13 @@ a { color: inherit; text-decoration: none; }
     width: 48px;
     height: 48px;
     margin-bottom: 20px;
-    color: var(--accent-bright);
-    opacity: 0.8;
+    color: var(--accent);
+    opacity: 0.9;
 }
 .method-num {
     font-family: var(--font-display);
     font-size: 11px;
-    color: var(--accent-bright);
+    color: var(--accent);
     letter-spacing: 2px;
     direction: ltr;
     display: inline-block;
@@ -642,11 +641,11 @@ a { color: inherit; text-decoration: none; }
     font-size: 24px;
     margin-bottom: 12px;
     letter-spacing: -0.3px;
-    color: #fff;
+    color: var(--ink);
 }
 .method-card p {
     font-size: 15px;
-    color: rgba(255,255,255,0.55);
+    color: var(--ink-mid);
     line-height: 1.65;
 }
 
@@ -1485,8 +1484,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section--cta-banner {
-    background: var(--ink);
-    color: #fff;
+    background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper-dark) 100%);
+    color: var(--ink);
     text-align: center;
     padding: calc(var(--space-section) * 0.8) 0;
     position: relative;
@@ -1495,10 +1494,10 @@ a { color: inherit; text-decoration: none; }
 .section--cta-banner .hero-mesh {
     position: absolute;
     inset: 0;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .section--cta-banner .section-title {
-    color: #fff;
+    color: var(--ink);
     position: relative;
     z-index: 1;
 }
@@ -1506,4 +1505,7 @@ a { color: inherit; text-decoration: none; }
     position: relative;
     z-index: 1;
     margin-top: 32px;
+}
+.section--cta-banner .hero-note {
+    color: var(--ink-mid);
 }
