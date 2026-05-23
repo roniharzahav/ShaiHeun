@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גלריה — שאי-הון</title>
+    <meta name="description" content="רגעים מהמזרן — תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון.">
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <meta property="og:title" content="גלריה — שאי-הון">
+    <meta property="og:description" content="רגעים מהמזרן — תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון.">
+    <meta property="og:image" content="https://shi-heun.com/hero.png">
+    <meta property="og:url" content="https://shi-heun.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="גלריה — שאי-הון">
+    <meta name="twitter:description" content="רגעים מהמזרן — תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון.">
+    <meta name="twitter:image" content="https://shi-heun.com/hero.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Assistant:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/script-zHYtDwA3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/script-eHme37UY.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">דלג לתוכן</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="שאי-הון" class="brand-logo">
+        </a>
+        <nav class="nav" aria-label="ניווט ראשי">
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="פתיחת תפריט">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list" id="navList">
+                <li><a href="index.html" >דף הבית</a></li>
+                <li><a href="about.html" >אודות</a></li>
+                <li><a href="gallery.html" class="is-active">גלריה</a></li>
+                <li><a href="locations.html" >מועדונים</a></li>
+                <li><a href="events.html" >אירועים</a></li>
+                <li><a href="shop.html" >חנות</a></li>
+                <li><a href="contact.html" >צור קשר</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+    <section class="page-header">
+        <div class="hero-mesh" aria-hidden="true"></div>
+        <div class="container">
+            <p class="section-eyebrow">גלריה</p>
+            <h1 class="section-title">רגעים מהמזרן.</h1>
+            <p class="section-lede">תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון.</p>
+        </div>
+    </section>
+
+    <section class="section section--gallery">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item gallery-item--tall"><img src="gallery-3.jpg" alt="מתאמן מבצע תנועת קראטה באולם האימונים" loading="lazy" width="400" height="600"></div>
+                <div class="gallery-item"><img src="gallery-2.jpg" alt="זוג מתאמנים באימון ג'ודו על המזרן" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-1.jpg" alt="קבוצת מתאמנים בתרגול עמידות קרב" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-4.jpg" alt="מאמן מדגים טכניקת הגנה עצמית" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-item--wide gallery-hidden"><img src="gallery-5.jpg" alt="אימון קרב מגע קבוצתי" loading="lazy" width="800" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-6.jpg" alt="ילדים באימון שאי-הון ראשון" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-7.jpg" alt="מבחני דרגה — מתאמן מציג טכניקה" loading="lazy" width="400" height="300"></div>
+            </div>
+            <button class="gallery-toggle" id="galleryToggle" aria-label="הצג או הסתר תמונות נוספות בגלריה" aria-expanded="false" aria-controls="galleryGrid"><span class="gallery-toggle-more">הצג עוד</span><span class="gallery-toggle-less">הצג פחות</span></button>
+        </div>
+    </section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="סגור">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <img src="logo.png" alt="שאי-הון" class="footer-logo">
+            <span>עמותת שאי-הון ישראל</span>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> כל הזכויות שמורות.</p>
+    </div>
+</footer>
+
+</body>
+</html>
