@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    {{> head title="גלריה" description="רגעים מהמזרן — תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון."}}
+</head>
+<body>
+<a href="#main-content" class="skip-link">דלג לתוכן</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+{{> nav gallery=true}}
+
+<main id="main-content" tabindex="-1">
+
+    <section class="page-header">
+        <div class="hero-mesh" aria-hidden="true"></div>
+        <div class="container">
+            <p class="section-eyebrow">גלריה</p>
+            <h1 class="section-title">רגעים מהמזרן.</h1>
+            <p class="section-lede">תמונות מאימונים, מבחני דרגה ואירועים משפחת שאי-הון.</p>
+        </div>
+    </section>
+
+    <section class="section section--gallery">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item gallery-item--tall"><img src="gallery-3.jpg" alt="מתאמן מבצע תנועת קראטה באולם האימונים" loading="lazy" width="400" height="600"></div>
+                <div class="gallery-item"><img src="gallery-2.jpg" alt="זוג מתאמנים באימון ג'ודו על המזרן" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-1.jpg" alt="קבוצת מתאמנים בתרגול עמידות קרב" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item"><img src="gallery-4.jpg" alt="מאמן מדגים טכניקת הגנה עצמית" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-item--wide gallery-hidden"><img src="gallery-5.jpg" alt="אימון קרב מגע קבוצתי" loading="lazy" width="800" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-6.jpg" alt="ילדים באימון שאי-הון ראשון" loading="lazy" width="400" height="300"></div>
+                <div class="gallery-item gallery-hidden"><img src="gallery-7.jpg" alt="מבחני דרגה — מתאמן מציג טכניקה" loading="lazy" width="400" height="300"></div>
+            </div>
+            <button class="gallery-toggle" id="galleryToggle" aria-label="הצג או הסתר תמונות נוספות בגלריה" aria-expanded="false" aria-controls="galleryGrid"><span class="gallery-toggle-more">הצג עוד</span><span class="gallery-toggle-less">הצג פחות</span></button>
+        </div>
+    </section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="סגור">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+</div>
+
+{{> footer}}
+</body>
+</html>
