@@ -31,6 +31,17 @@
         });
     }
 
+    // Contact form — show success instead of mailto
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (contactForm && formSuccess) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('is-visible');
+        });
+    }
+
     // Footer year
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
@@ -58,7 +69,8 @@
     const revealEls = document.querySelectorAll(
         '.section-title, .section-lede, .prose, .method-card, .values-list li, ' +
         '.gallery-item, .pull-quote, .about-image, .contact-card, .hero-title, ' +
-        '.hero-lede, .hero-meta, .eyebrow, .event-card, .shop-card'
+        '.hero-lede, .hero-meta, .eyebrow, .event-card, .shop-card, ' +
+        '.hero-note'
     );
     revealEls.forEach(el => el.classList.add('reveal'));
 
