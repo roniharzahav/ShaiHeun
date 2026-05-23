@@ -24,7 +24,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'src/pages/contact.html')
       }
     },
-    outDir: '../dist',
+    outDir: '../../dist',
     emptyOutDir: true
   },
   root: 'src/pages',
