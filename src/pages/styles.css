@@ -580,8 +580,9 @@ a { color: inherit; text-decoration: none; }
 
 .method-grid {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1px;
     margin-top: 48px;
     background: rgba(255,255,255,0.06);
@@ -592,6 +593,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .method-card {
+    flex: 1 1 300px;
+    max-width: 400px;
     background: rgba(255,255,255,0.03);
     padding: 40px 32px;
     transition: background 0.4s ease, transform 0.4s ease;
@@ -645,6 +648,93 @@ a { color: inherit; text-decoration: none; }
     font-size: 15px;
     color: rgba(255,255,255,0.55);
     line-height: 1.65;
+}
+
+/* ============================================================
+   HIGHLIGHTS
+   ============================================================ */
+.section--highlights {
+    background: var(--paper-2);
+    padding: calc(var(--space-section) * 0.6) 0;
+}
+.highlights-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1px;
+    background: var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+.highlight-card {
+    flex: 1 1 200px;
+    max-width: 280px;
+    background: var(--paper);
+    padding: 40px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.highlight-number {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    direction: ltr;
+}
+.highlight-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-mid);
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   WHY TRAIN
+   ============================================================ */
+.section--why-train {
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+}
+.benefits-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.benefit-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 36px 28px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s ease;
+    border-radius: var(--radius-sm);
+}
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+.benefit-card h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--ink);
+}
+.benefit-card p {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.6;
 }
 
 /* ============================================================
@@ -1312,8 +1402,8 @@ a { color: inherit; text-decoration: none; }
     .hero-inner { order: 1; }
     .grid-two { grid-template-columns: 1fr; }
     .grid-two-aside { position: static; }
-    .method-grid { grid-template-columns: repeat(2, 1fr); }
     .shop-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
     .gallery-item--wide { grid-column: span 2; }
     .gallery-item--tall { grid-row: span 1; }
@@ -1347,7 +1437,7 @@ a { color: inherit; text-decoration: none; }
         color: var(--ink-soft);
     }
     .hero-title { letter-spacing: -1px; }
-    .method-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; }
     .gallery-item--wide,
     .gallery-item--tall { grid-column: auto; grid-row: auto; }
