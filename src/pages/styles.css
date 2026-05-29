@@ -943,7 +943,14 @@ a { color: inherit; text-decoration: none; }
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .event-card.is-past {
-    opacity: 0.5;
+    opacity: 0.45;
+    filter: grayscale(0.6);
+}
+.event-card.is-past .event-date {
+    background: var(--paper);
+}
+.event-card.is-past .event-day {
+    color: var(--muted);
 }
 .event-card.is-past .event-tag {
     background: rgba(0,0,0,0.03);
@@ -961,8 +968,15 @@ a { color: inherit; text-decoration: none; }
     padding: 16px 12px;
     background: linear-gradient(135deg, var(--paper-2) 0%, var(--paper-dark) 100%);
     border: 1px solid var(--line);
-    min-height: 100px;
+    min-height: 110px;
     border-radius: var(--radius-sm);
+}
+.event-year {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 .event-month {
     font-family: var(--font-body);
@@ -978,7 +992,7 @@ a { color: inherit; text-decoration: none; }
     font-weight: 900;
     color: var(--ink);
     line-height: 1;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 .event-body {
     display: flex;
