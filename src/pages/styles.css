@@ -1518,8 +1518,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section--cta-banner {
-    background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper-dark) 100%);
-    color: var(--ink);
+    background: var(--ink);
+    color: #fff;
     text-align: center;
     padding: calc(var(--space-section) * 0.8) 0;
     position: relative;
@@ -1528,10 +1528,10 @@ a { color: inherit; text-decoration: none; }
 .section--cta-banner .hero-mesh {
     position: absolute;
     inset: 0;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 .section--cta-banner .section-title {
-    color: var(--ink);
+    color: #fff;
     position: relative;
     z-index: 1;
 }
@@ -1541,5 +1541,7 @@ a { color: inherit; text-decoration: none; }
     margin-top: 32px;
 }
 .section--cta-banner .hero-note {
-    color: var(--ink-mid);
+    color: rgba(255,255,255,0.5);
+    position: relative;
+    z-index: 1;
 }
