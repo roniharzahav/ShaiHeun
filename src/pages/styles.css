@@ -1057,22 +1057,23 @@ a { color: inherit; text-decoration: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--line);
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 14px;
-    letter-spacing: 1px;
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
 }
-.shop-image::before {
-    content: '';
-    position: absolute;
-    inset: 20px;
-    border: 1px dashed var(--line);
-    opacity: 0.6;
-    border-radius: var(--radius-sm);
+.shop-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--line);
+}
+.shop-placeholder span {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 .shop-card h3 {
     font-family: var(--font-display);
