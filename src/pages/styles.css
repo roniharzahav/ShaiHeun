@@ -880,6 +880,21 @@ a { color: inherit; text-decoration: none; }
     transition: background 0.2s ease;
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+.lightbox-caption {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+}
 
 /* ============================================================
    EVENTS
