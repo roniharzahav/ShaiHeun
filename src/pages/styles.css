@@ -1139,6 +1139,28 @@ a { color: inherit; text-decoration: none; }
 .location-card:hover::before {
     transform: scaleX(1);
 }
+.location-card--soon {
+    background: linear-gradient(135deg, var(--paper) 0%, var(--paper-2) 100%);
+    border-style: dashed;
+    opacity: 0.85;
+}
+.location-card--soon:hover {
+    opacity: 1;
+}
+.location-card--soon .coach-photo--placeholder {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+.location-card--soon .location-name::after {
+    content: ' — בקרוב';
+    font-weight: 400;
+    color: var(--accent);
+}
+.location-card--soon .location-actions {
+    display: none;
+}
 .location-coach {
     display: flex;
     align-items: center;
