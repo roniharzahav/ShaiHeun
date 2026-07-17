@@ -44,7 +44,7 @@ New top navigation:
 
 ### Contact
 - Add a page header/hero to match the visual style of other pages.
-- Fix the contact form so it actually submits (currently shows a success message without sending data).
+- Fix the contact form so it actually delivers the inquiry (e.g., via a form endpoint service, mailto link, or by redirecting to WhatsApp). The current form only shows a success message without sending data.
 
 ### Shop
 - Clarify whether products are available now or coming soon.
