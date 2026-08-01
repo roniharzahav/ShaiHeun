@@ -46,17 +46,6 @@ import './styles.css';
         });
     }
 
-    // Contact form — show success instead of mailto
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    if (contactForm && formSuccess) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            contactForm.style.display = 'none';
-            formSuccess.classList.add('is-visible');
-        });
-    }
-
     // Hero carousel
     const carouselTrack = document.getElementById('carouselTrack');
     const carouselDots = document.getElementById('carouselDots');
