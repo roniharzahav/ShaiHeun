@@ -20,7 +20,8 @@ export default defineConfig({
         about: resolve(__dirname, 'src/pages/about.html'),
         locations: resolve(__dirname, 'src/pages/locations.html'),
         events: resolve(__dirname, 'src/pages/events.html'),
-        shop: resolve(__dirname, 'src/pages/shop.html')
+        shop: resolve(__dirname, 'src/pages/shop.html'),
+        courses: resolve(__dirname, 'src/pages/courses.html')
       },
       output: {
         assetFileNames: (assetInfo) => {
