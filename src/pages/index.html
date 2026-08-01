@@ -11,161 +11,112 @@
 
 <main id="main-content" tabindex="-1">
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="hero-mesh" aria-hidden="true"></div>
-        <div class="container hero-inner">
+    <!-- HERO CAROUSEL -->
+    <section class="hero-carousel" id="top" aria-label="תמונות שאי-הון">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide is-active" data-index="0">
+                <div class="carousel-image carousel-image--placeholder" role="img" aria-label="מתאמן שאי-הון בתנועה"></div>
+            </div>
+            <div class="carousel-slide" data-index="1">
+                <div class="carousel-image carousel-image--placeholder" role="img" aria-label="אימון קבוצתי שאי-הון"></div>
+            </div>
+            <div class="carousel-slide" data-index="2">
+                <div class="carousel-image carousel-image--placeholder" role="img" aria-label="טכניקת הגנה עצמית"></div>
+            </div>
+        </div>
+        <div class="carousel-overlay">
             <p class="eyebrow">עמותת שאי-הון ישראל</p>
             <h1 class="hero-title">
                 <span class="title-line">שאי</span>
                 <span class="title-line title-line--accent">הון</span>
             </h1>
-            <p class="hero-lede">
-                ״המבחן האמיתי של אימוני שאי-הון אינו מה שאתה מבצע באימון, אלא היכולת לקחת איתך את היכולות שפיתחת ולהעביר אותן לכל תחומי החיים.״
-            </p>
-            <a href="contact.html" class="hero-cta">הצטרף לאימון</a>
-            <p class="hero-note">שיעור ראשון חינם — בלי התחייבות</p>
+            <p class="hero-lede">שיטת לחימה ישראלית מאז 1960</p>
         </div>
-        <div class="hero-figure" aria-hidden="true">
-            <div class="hero-figure-frame">
-                <img src="hero.png" alt="מתאמן שאי-הון בתנועת קראטה דינמית" class="hero-img" width="600" height="800" fetchpriority="high">
-            </div>
-        </div>
-        <div class="scroll-indicator" aria-hidden="true">
-            <span>גלול למטה</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-        </div>
+        <button class="carousel-arrow carousel-arrow--prev" aria-label="שקופית קודמת" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-arrow carousel-arrow--next" aria-label="שקופית הבאה" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="ניווט קרוסלה"></div>
     </section>
 
-    <!-- ABOUT TEASER -->
-    <section class="section section--about" id="about">
-        <div class="container">
-            <p class="section-eyebrow">אודות</p>
-            <h2 class="section-title">מדרום אפריקה למושב מולדת.</h2>
-            <div class="grid-two">
-                <div class="grid-two-aside">
-                    <div class="about-image">
-                        <div class="founder-frame">
-                            <img src="founder.jpg" alt="אונשי סידני שלמה פייגה ז״ל, מייסד שיטת שאי-הון" width="400" height="500">
-                        </div>
-                        <p class="about-caption">
-                            <strong>אונשי סידני שלמה פייגה</strong>
-                            <span>1932 — 2007</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-two-main prose">
-                    <p class="lede">
-                        בשנת 1960 עלה לישראל אונשי סידני שלמה פייגה ז״ל יחד עם רעייתו נחמה נורין ז״ל ושני בניו, רועי ואילן.
-                        במושב מולדת נולדו אורן והתאומים גיל וזיו — ושם נפתח המועדון הראשון של שיטת שאי-הון.
-                    </p>
-                    <p>
-                        סידני היה הראשון שהביא את הקארטה לישראל. במכבייה השישית הוא הציג את שיטת הלחימה שפיתח,
-                        וחשף לראשונה את שאי-הון. בשל תרומתו לעולם אומנויות הלחימה הוא הוכנס להיכל התהילה
-                        של אומנויות הלחימה בדרום אפריקה — בדרגה הגבוהה ביותר.
-                    </p>
-                    <a href="about.html" class="teaser-cta">קרא עוד על ההיסטוריה</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- METHOD PREVIEW -->
-    <section class="section section--method" id="method">
+    <!-- WHAT IS SHAI-HEUN -->
+    <section class="section section--what" id="what">
         <div class="container">
             <p class="section-eyebrow centered">השיטה</p>
-            <h2 class="section-title centered">חמש אומנויות. שפה אחת.</h2>
+            <h2 class="section-title centered">מה זה שאי הון?</h2>
             <p class="section-lede centered">
-                שאי-הון אינה ענף אחד. היא שילוב מדויק של כמה תחומים שאת כולם תרגל המייסד לאורך חייו,
-                והרכיב מהם שפה אחת עם השקפת עולם משלה.
+                שאי הון היא שיטת לחימה ישראלית, שנוסדה בשנת 1960, המבוססת על ארבעה יסודות של אומנויות לחימה.
             </p>
-
-            <ul class="method-grid">
-                <li class="method-card">
-                    <svg class="method-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5a2 2 0 0 0 1.925 2.5h15.95a2 2 0 0 0 1.925-2.5l-2.495-9.04A2 2 0 0 0 17.5 8Z"/></svg>
-                    <span class="method-num">01</span>
-                    <h3>ג׳ודו</h3>
-                    <p>זריקות, מנופים והבנה של מרכז הכובד. הבסיס לכל היתר.</p>
+            <ul class="card-grid">
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('karate.jpg');" role="img" aria-label="קראטה"></div>
+                    <h3 class="card-title">קראטה</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על קראטה בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="method-card">
-                    <svg class="method-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    <span class="method-num">02</span>
-                    <h3>קארטה</h3>
-                    <p>טכניקה נקייה, דיסציפלינה, נשימה ומרחק. השיטה שהביא סידני ראשון לישראל.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('judo.jpg');" role="img" aria-label="ג'ודו"></div>
+                    <h3 class="card-title">ג'ודו</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על ג'ודו בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="method-card">
-                    <svg class="method-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8a2 2 0 0 0-2 2v6h-4V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2z"/></svg>
-                    <span class="method-num">03</span>
-                    <h3>אגרוף</h3>
-                    <p>תזמון, עבודת רגליים ומרחק תקיפה. החיבור בין המסורת לפרקטיקה.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('self-defense.jpg');" role="img" aria-label="הגנה עצמית"></div>
+                    <h3 class="card-title">הגנה עצמית</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על הגנה עצמית בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="method-card">
-                    <svg class="method-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <span class="method-num">04</span>
-                    <h3>ג׳וג׳יטסו</h3>
-                    <p>שליטה, אחיזות וסיומים על הקרקע. עבודה צמודה עם בן זוג לאימון.</p>
-                </li>
-                <li class="method-card">
-                    <svg class="method-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span class="method-num">05</span>
-                    <h3>הגנה עצמית וקרב מגע</h3>
-                    <p>ייחודיים לשאי-הון. כלים שעובדים בעולם האמיתי, לא רק באולם האימונים.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('boxing.jpg');" role="img" aria-label="אגרוף"></div>
+                    <h3 class="card-title">אגרוף</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על אגרוף בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- WHY TRAIN -->
-    <section class="section section--why-train" id="why-train">
+    <!-- WHY SHAI-HEUN -->
+    <section class="section section--why" id="why">
         <div class="container">
-            <p class="section-eyebrow centered">למה כדאי להתאמן</p>
-            <h2 class="section-title centered">יותר מאומנות לחימה.</h2>
-            <p class="section-lede centered">
-                שאי-הון היא דרך חיים. כל אימון בונה לא רק כוח פיזי, אלא גם תשוקה, דיסציפלינה וכלים שמלווים אותך מעבר לאולם.
-            </p>
-            <ul class="benefits-grid">
-                <li class="benefit-card">
-                    <svg class="benefit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                    <h3>כושר גופני</h3>
-                    <p>חיזוק הגוף, שיפור הסיבולת והגמישות — בכל גיל ובכל רמה.</p>
+            <p class="section-eyebrow centered">למה כדאי?</p>
+            <h2 class="section-title centered">למה שאי הון?</h2>
+            <ul class="card-grid">
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('fitness.jpg');" role="img" aria-label="כושר גופני"></div>
+                    <h3 class="card-title">כושר גופני</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על הכושר הגופני בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="benefit-card">
-                    <svg class="benefit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <h3>הגנה עצמית</h3>
-                    <p>כלים פרקטיים ואפקטיביים שעובדים בעולם האמיתי — לא רק באולם.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('confidence.jpg');" role="img" aria-label="ביטחון עצמי"></div>
+                    <h3 class="card-title">חיזוק ביטחון עצמי</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על ביטחון עצמי בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="benefit-card">
-                    <svg class="benefit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    <h3>דיסציפלינה וריכוז</h3>
-                    <p>למידה להתמיד, להתגבר על קשיים ולהשיג מטרות — בכל תחום בחיים.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('self-defense-why.jpg');" role="img" aria-label="הגנה עצמית"></div>
+                    <h3 class="card-title">הגנה עצמית</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על הגנה עצמית בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
-                <li class="benefit-card">
-                    <svg class="benefit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <h3>קהילה ושייכות</h3>
-                    <p>משפחת שאי-הון — קהילה תומכת של מתאמנים מכל הגילאים והרקעים.</p>
+                <li class="card" data-card aria-expanded="false">
+                    <div class="card-image" style="background-image: url('community.jpg');" role="img" aria-label="קהילה"></div>
+                    <h3 class="card-title">קהילה</h3>
+                    <div class="card-body">
+                        <p>טקסט מפורט על הקהילה בשאי-הון יתווסף כאן.</p>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- PHILOSOPHY -->
-    <section class="section section--philosophy" id="philosophy">
-        <div class="container">
-            <div class="philosophy-divider"></div>
-            <blockquote class="philosophy-quote">
-                <p>המבחן האמיתי אינו מה שאתה <em>מבצע באימון</em>,<br>אלא היכולת לקחת איתך את היכולות <em>לכל תחומי החיים</em>.</p>
-            </blockquote>
-            <p class="philosophy-source">— אונשי סידני שלמה פייגה ז״ל</p>
-        </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section class="section section--cta-banner">
-        <div class="hero-mesh" aria-hidden="true"></div>
-        <div class="container">
-            <h2 class="section-title centered">מוכנים להתחיל?</h2>
-            <a href="contact.html" class="hero-cta">הצטרף לאימון</a>
-            <p class="hero-note">שיעור ראשון חינם — בלי התחייבות</p>
         </div>
     </section>
 
