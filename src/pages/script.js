@@ -138,18 +138,25 @@ import './styles.css';
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
-    // Interactive cards: hover on desktop, toggle on touch
+    // Interactive cards: hover on desktop, toggle on touch/keyboard
     const cards = document.querySelectorAll('[data-card]');
 
     const isHoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
+    const toggleCard = (card) => {
+        const open = card.classList.toggle('is-open');
+        card.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
     cards.forEach(card => {
         if (isHoverable) return; // CSS handles hover
 
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            const open = card.classList.toggle('is-open');
-            card.setAttribute('aria-expanded', open ? 'true' : 'false');
+        card.addEventListener('click', () => toggleCard(card));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleCard(card);
+            }
         });
     });
 
@@ -165,8 +172,7 @@ import './styles.css';
     const revealEls = document.querySelectorAll(
         '.section-title, .section-lede, .prose, .card, ' +
         '.pull-quote, .about-image, ' +
-        '.event-card, .shop-card, .location-card, .philosophy-quote, ' +
-        '.philosophy-source, .philosophy-divider, .highlight-card, .benefit-card'
+        '.event-card, .shop-card, .location-card, .highlight-card'
     );
     revealEls.forEach(el => el.classList.add('reveal'));
 
