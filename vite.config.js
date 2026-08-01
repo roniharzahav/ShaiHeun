@@ -18,11 +18,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/pages/index.html'),
         about: resolve(__dirname, 'src/pages/about.html'),
-        gallery: resolve(__dirname, 'src/pages/gallery.html'),
         locations: resolve(__dirname, 'src/pages/locations.html'),
         events: resolve(__dirname, 'src/pages/events.html'),
-        shop: resolve(__dirname, 'src/pages/shop.html'),
-        contact: resolve(__dirname, 'src/pages/contact.html')
+        shop: resolve(__dirname, 'src/pages/shop.html')
       },
       output: {
         assetFileNames: (assetInfo) => {
