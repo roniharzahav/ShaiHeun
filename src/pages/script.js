@@ -149,6 +149,21 @@ import './styles.css';
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
+    // Interactive cards: hover on desktop, toggle on touch
+    const cards = document.querySelectorAll('[data-card]');
+
+    const isHoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    cards.forEach(card => {
+        if (isHoverable) return; // CSS handles hover
+
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const open = card.classList.toggle('is-open');
+            card.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+    });
+
     // Mark past events
     document.querySelectorAll('[data-event-date]').forEach(card => {
         const date = new Date(card.dataset.eventDate);
@@ -157,60 +172,10 @@ import './styles.css';
         if (date < now) card.classList.add('is-past');
     });
 
-    // Gallery expand/collapse
-    const galleryToggle = document.getElementById('galleryToggle');
-    const galleryGrid = document.getElementById('galleryGrid');
-    if (galleryToggle && galleryGrid) {
-        galleryToggle.addEventListener('click', () => {
-            galleryGrid.classList.toggle('is-expanded');
-            const isExpanded = galleryGrid.classList.contains('is-expanded');
-            galleryToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-        });
-    }
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
-
-    if (lightbox && lightboxImg) {
-        document.querySelectorAll('.gallery-item img').forEach(img => {
-            img.parentElement.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightboxCaption.textContent = img.dataset.caption || '';
-                lightbox.classList.add('is-active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        const closeLightbox = () => {
-            lightbox.classList.remove('is-active');
-            document.body.style.overflow = '';
-            lightboxImg.src = '';
-            lightboxCaption.textContent = '';
-        };
-
-        if (lightboxClose) {
-            lightboxClose.addEventListener('click', closeLightbox);
-        }
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('is-active')) {
-                closeLightbox();
-            }
-        });
-    }
-
     // Reveal-on-scroll for sections
     const revealEls = document.querySelectorAll(
-        '.section-title, .section-lede, .prose, .method-card, ' +
-        '.gallery-item, .pull-quote, .about-image, .contact-card, ' +
+        '.section-title, .section-lede, .prose, .card, ' +
+        '.pull-quote, .about-image, ' +
         '.event-card, .shop-card, .location-card, .philosophy-quote, ' +
         '.philosophy-source, .philosophy-divider, .highlight-card, .benefit-card'
     );
