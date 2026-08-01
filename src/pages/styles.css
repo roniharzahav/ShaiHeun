@@ -1514,3 +1514,113 @@ a { color: inherit; text-decoration: none; }
     position: relative;
     z-index: 1;
 }
+
+/* ============================================================
+   INTERACTIVE CARDS
+   ============================================================ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 48px 0 0;
+}
+
+.card {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+}
+
+.card-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.card-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--paper);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    z-index: 1;
+    padding: 16px;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-body {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0,0,0,0.65);
+    color: var(--paper);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    text-align: center;
+}
+
+.card-body p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Desktop hover */
+@media (hover: hover) and (pointer: fine) {
+    .card:hover .card-image {
+        filter: brightness(0.5);
+        transform: scale(1.05);
+    }
+    .card:hover .card-title {
+        opacity: 0;
+    }
+    .card:hover .card-body {
+        opacity: 1;
+    }
+}
+
+/* Mobile / non-hover */
+.card.is-open .card-image {
+    filter: brightness(0.5);
+    transform: scale(1.05);
+}
+
+.card.is-open .card-title {
+    opacity: 0;
+}
+
+.card.is-open .card-body {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        aspect-ratio: 16 / 9;
+    }
+}
