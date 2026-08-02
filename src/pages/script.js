@@ -5,6 +5,8 @@ import './styles.css';
 (function () {
     'use strict';
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Scroll progress indicator
     const scrollProgress = document.getElementById('scrollProgress');
     if (scrollProgress) {
@@ -105,12 +107,12 @@ import './styles.css';
 
         createDots();
         updateSlides();
-        startAuto();
+        if (!prefersReducedMotion) startAuto();
 
-        if (carouselPrev) carouselPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
-        if (carouselNext) carouselNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+        if (carouselPrev) carouselPrev.addEventListener('click', () => { stopAuto(); prev(); if (!prefersReducedMotion) startAuto(); });
+        if (carouselNext) carouselNext.addEventListener('click', () => { stopAuto(); next(); if (!prefersReducedMotion) startAuto(); });
 
-        if (heroCarousel) {
+        if (heroCarousel && !prefersReducedMotion) {
             heroCarousel.addEventListener('mouseenter', stopAuto);
             heroCarousel.addEventListener('mouseleave', startAuto);
         }
@@ -128,7 +130,7 @@ import './styles.css';
                 if (Math.abs(diff) > 50) {
                     stopAuto();
                     diff > 0 ? next() : prev();
-                    startAuto();
+                    if (!prefersReducedMotion) startAuto();
                 }
             }, { passive: true });
         }
@@ -199,7 +201,7 @@ import './styles.css';
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
             }
         });
     });
