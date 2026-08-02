@@ -63,12 +63,15 @@ import './styles.css';
 
         const createDots = () => {
             carouselDots.innerHTML = '';
-            slides.forEach((_, i) => {
+            slides.forEach((slide, i) => {
+                const slideId = slide.id || `carousel-slide-${i}`;
+                if (!slide.id) slide.id = slideId;
                 const btn = document.createElement('button');
                 btn.className = 'carousel-dot' + (i === 0 ? ' is-active' : '');
                 btn.setAttribute('role', 'tab');
                 btn.setAttribute('aria-label', `שקופית ${i + 1}`);
                 btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+                btn.setAttribute('aria-controls', slideId);
                 btn.type = 'button';
                 btn.addEventListener('click', () => goTo(i));
                 carouselDots.appendChild(btn);
@@ -134,6 +137,19 @@ import './styles.css';
                 }
             }, { passive: true });
         }
+
+        // Keyboard navigation for tablist (RTL: Left = next, Right = previous)
+        carouselDots.addEventListener('keydown', (e) => {
+            if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+            e.preventDefault();
+            const direction = e.key === 'ArrowLeft' ? 1 : -1;
+            const nextIndex = (current + direction + total) % total;
+            stopAuto();
+            goTo(nextIndex);
+            if (!prefersReducedMotion) startAuto();
+            const dots = carouselDots.querySelectorAll('.carousel-dot');
+            if (dots[nextIndex]) dots[nextIndex].focus();
+        });
     }
 
     // Footer year
