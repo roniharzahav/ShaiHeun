@@ -2,12 +2,13 @@
 
 ## Summary
 
-Redesign the homepage hero overlay so the brand name "שאי הון" appears on a single line, with the association logo (`logo.png`) placed to its right (visually, in the RTL layout).
+Redesign the homepage hero overlay so the brand name "שאי-הון" appears on a single line, in the Alef font, with the association logo (`logo.png`) placed to its right (visually, in the RTL layout).
 
 ## Goal
 
-- Replace the current two-line title (`שאי` / `הון`) with a one-line lockup.
+- Replace the current two-line title (`שאי` / `הון`) with a one-line lockup reading `שאי-הון`.
 - Add `logo.png` inline with the title, on the same visual line.
+- Use the **Alef** font for the title to match the logo typography.
 - Keep the hero overlay readable and balanced on desktop and mobile.
 - Preserve accessibility and the page heading hierarchy.
 
@@ -15,6 +16,7 @@ Redesign the homepage hero overlay so the brand name "שאי הון" appears on 
 
 - `src/pages/index.html`
 - `src/pages/styles.css`
+- `src/partials/head.html`
 
 ## Detailed design
 
@@ -34,7 +36,7 @@ With:
 ```html
 <h1 class="hero-title">
     <img src="logo.png" alt="" class="hero-title-logo">
-    <span class="hero-title-text">שאי <span class="hero-title-accent">הון</span></span>
+    <span class="hero-title-text">שאי-<span class="hero-title-accent">הון</span></span>
 </h1>
 ```
 
@@ -73,8 +75,9 @@ Because the document is `dir="rtl"`, the DOM order places the logo on the right 
        font-weight: 500;
    }
    ```
-5. Keep existing `.hero-title` font size (`clamp(52px, 11vw, 150px)`), `font-weight: 900`, and `letter-spacing: -3px`.
-6. Keep the `.carousel-overlay` centered flex column, eyebrow, and lede untouched.
+5. Keep existing `.hero-title` font size (`clamp(52px, 11vw, 150px)`), `letter-spacing: -3px`, and `font-weight: 700` (Alef only loads 400/700).
+6. Load the Alef font in `src/partials/head.html` alongside Rubik and Assistant.
+7. Keep the `.carousel-overlay` centered flex column, eyebrow, and lede untouched.
 
 ### Responsive behavior
 
@@ -89,8 +92,9 @@ Because the document is `dir="rtl"`, the DOM order places the logo on the right 
 
 ## Acceptance criteria
 
-- [ ] `src/pages/index.html` title lockup uses a single line with logo + text.
-- [ ] `src/pages/styles.css` lays out the logo and title inline, centered.
+- [ ] `src/pages/index.html` title lockup uses a single line reading `שאי-הון` with logo + text.
+- [ ] `src/partials/head.html` loads the Alef font.
+- [ ] `src/pages/styles.css` uses Alef for the hero title and lays out the logo inline, centered.
 - [ ] The word "הון" keeps the accent color (`var(--accent-bright)`).
 - [ ] The eyebrow and lede text remain unchanged.
 - [ ] The design is visually balanced on desktop and mobile.

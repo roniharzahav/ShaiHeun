@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Update the homepage hero overlay so the brand name "שאי הון" appears on a single line with the association logo inline to its right.
+**Goal:** Update the homepage hero overlay so the brand name "שאי-הון" appears on a single line in the Alef font, with the association logo inline to its right.
 
-**Architecture:** Replace the two-line title markup with a single-line flex lockup (logo + text) and update the stylesheet to lay it out inline, centered, and responsive. No JavaScript changes are needed.
+**Architecture:** Replace the two-line title markup with a single-line flex lockup (logo + text), load the Alef font, and update the stylesheet to lay it out inline, centered, and responsive. No JavaScript changes are needed.
 
 **Tech Stack:** Vite, Handlebars partials, plain HTML/CSS.
 
@@ -14,6 +14,7 @@
 - All text is Hebrew/RTL; keep `dir="rtl"` semantics.
 - Use existing CSS variables (`--paper`, `--accent-bright`, etc.).
 - Logo file is `public/logo.png` and is served at root (`logo.png`).
+- Title text is "שאי-הון" with hyphen; title font is Alef (weights 400 and 700 loaded).
 - Build must succeed with `npm run build`.
 
 ---
@@ -43,7 +44,7 @@
     ```html
     <h1 class="hero-title">
         <img src="logo.png" alt="" class="hero-title-logo">
-        <span class="hero-title-text">שאי <span class="hero-title-accent">הון</span></span>
+        <span class="hero-title-text">שאי-<span class="hero-title-accent">הון</span></span>
     </h1>
     ```
 
@@ -63,11 +64,20 @@
 ### Task 2: Style the inline logo-title lockup in `src/pages/styles.css`
 
 **Files:**
-- Modify: `src/pages/styles.css:195-211`, `src/pages/styles.css:993-1000`
+- Modify: `src/partials/head.html:24`
+- Modify: `src/pages/styles.css:21-23`, `src/pages/styles.css:195-211`, `src/pages/styles.css:993-1000`
 
 **Interfaces:**
 - Consumes: New classes `.hero-title-logo`, `.hero-title-text`, `.hero-title-accent` from Task 1.
 - Produces: Visual layout where logo and title share one centered line.
+
+- [ ] **Step 0: Load the Alef font**
+
+    Modify `src/partials/head.html` to add `family=Alef:wght@400;700` to the Google Fonts URL:
+
+    ```html
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Assistant:wght@300;400;500;700&family=Alef:wght@400;700&display=swap" rel="stylesheet">
+    ```
 
 - [ ] **Step 1: Convert `.hero-title` to a flex row**
 
@@ -97,8 +107,8 @@
 
     ```css
     .hero-title {
-        font-family: var(--font-display);
-        font-weight: 900;
+        font-family: var(--font-logo);
+        font-weight: 700;
         font-size: clamp(52px, 11vw, 150px);
         line-height: 0.9;
         letter-spacing: -3px;
@@ -148,8 +158,9 @@
 
     Open the local URL and verify:
 
-    - Logo appears to the right of "שאי הון" on one line.
+    - Logo appears to the right of "שאי-הון" on one line.
     - "הון" is still colored with the accent red.
+    - The title renders in the Alef font.
     - The layout is centered and balanced on desktop.
     - On mobile (narrow viewport), the logo and text stay on one line and scale down proportionally.
 
@@ -173,8 +184,10 @@
 ## Self-Review
 
 - **Spec coverage:**
-  - Single-line title: Task 1 markup.
+  - Single-line title with hyphen: Task 1 markup.
   - Logo to the right: Task 1 markup + Task 2 flex layout.
+  - Alef font loaded: Task 2 Step 0.
+  - Alef font applied: Task 2 Step 1 (`.hero-title` uses `--font-logo`).
   - Accent on "הון": Task 2 `.hero-title-accent`.
   - Responsive scaling: Task 2 uses `em`-relative logo sizing and existing `clamp()` font size.
   - Build succeeds: Task 2 Step 4.
