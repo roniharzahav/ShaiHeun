@@ -20,7 +20,7 @@ Refocus the Shai-Heun site on lead generation (trial-lesson signups) while simpl
 
 New top navigation:
 
-**דף הבית | אודות | מועדונים | אירועים | צור קשר | חנות**
+** דף הבית | אודות | מועדונים | אירועים | חנות | צור קשר **
 
 ## Per-page changes
 
