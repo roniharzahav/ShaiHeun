@@ -156,6 +156,21 @@ import './styles.css';
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
+    // Footer quick-contact form
+    const footerForm = document.getElementById('footerForm');
+    const footerSuccess = document.getElementById('footerSuccess');
+    if (footerForm && footerSuccess) {
+        footerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!footerForm.checkValidity()) {
+                footerForm.reportValidity();
+                return;
+            }
+            footerForm.hidden = true;
+            footerSuccess.hidden = false;
+        });
+    }
+
     // Interactive cards: hover on desktop, toggle on touch/keyboard
     const cards = document.querySelectorAll('[data-card]');
 

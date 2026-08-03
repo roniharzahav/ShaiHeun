@@ -1,41 +1,43 @@
 <footer class="site-footer">
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col footer-col--brand">
-                <a href="index.html" class="footer-brand-link">
-                    <img src="logo.png" alt="שאי-הון" class="footer-logo">
+        <div class="footer-main">
+            <div class="footer-contact-card">
+                <h3>שלחו לנו הודעה</h3>
+                <form class="footer-form" id="footerForm" novalidate>
+                    <label for="footerName">שם</label>
+                    <input type="text" id="footerName" name="name" required>
+
+                    <label for="footerEmail">אימייל</label>
+                    <input type="email" id="footerEmail" name="email" required>
+
+                    <label for="footerMessage">הודעה</label>
+                    <textarea id="footerMessage" name="message" rows="4" required></textarea>
+
+                    <button type="submit" class="footer-submit">שלח</button>
+                </form>
+                <p class="footer-success" id="footerSuccess" hidden>ההודעה נשלחה בהצלחה!</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="אינסטגרם">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
                 </a>
-                <p class="footer-desc">עמותת שאי-הון ישראל — שיטת לחימה ייחודית מאז 1960.</p>
-            </div>
-            <div class="footer-col">
-                <h4>ניווט</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">בית</a></li>
-                    <li><a href="about.html">מי אנחנו</a></li>
-                    <li><a href="locations.html">מאמנים</a></li>
-                    <li><a href="events.html">אירועים</a></li>
-                    <li><a href="courses.html">קורסים</a></li>
-                    <li><a href="shop.html">חנות</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>צור קשר</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:050-536-4659">050-536-4659</a></li>
-                    <li><a href="mailto:info@shi-heun.com">info@shi-heun.com</a></li>
-                    <li><a href="https://wa.me/972505364659?text=היי%2C%20אני%20מתעניין%20בשיעורי%20שאי-הון" target="_blank" rel="noopener">וואטסאפ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>מועדונים</h4>
-                <ul class="footer-links">
-                    <li><a href="locations.html" aria-label="מועדון עפולה">עפולה</a></li>
-                    <li><a href="locations.html" aria-label="מועדון נורית">נורית</a></li>
-                    <li><a href="locations.html" aria-label="מועדון תל אביב">תל אביב</a></li>
-                    <li><a href="locations.html" aria-label="מועדון ירושלים">ירושלים</a></li>
-                </ul>
+                <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="יוטיוב">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                </a>
+                <a href="index.html" aria-label="שאי-הון">
+                    <img src="logo.png" alt="שאי-הון" class="footer-social-logo">
+                </a>
             </div>
         </div>
+
         <div class="footer-bottom">
             <p class="footer-copy">&copy; <span id="year"></span> עמותת שאי-הון ישראל. כל הזכויות שמורות.</p>
         </div>
