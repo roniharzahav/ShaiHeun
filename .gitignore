@@ -21,3 +21,7 @@ node_modules/
 
 # Build output
 dist/
+
+# Claude Code workspace artifacts
+.claude/
+.superpowers/
