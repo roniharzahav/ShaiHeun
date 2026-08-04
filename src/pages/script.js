@@ -205,7 +205,7 @@ import './styles.css';
     const revealEls = document.querySelectorAll(
         '.section-title, .section-lede, .prose, .card, ' +
         '.pull-quote, .about-image, ' +
-        '.event-card, .shop-card, .location-card, .highlight-card'
+        '.event-card, .shop-card, .highlight-card'
     );
     revealEls.forEach(el => el.classList.add('reveal'));
 
