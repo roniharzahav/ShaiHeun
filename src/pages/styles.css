@@ -314,6 +314,95 @@ a { color: inherit; text-decoration: none; }
 }
 .section-lede.centered { text-align: center; margin-inline: auto; }
 
+/* What is Shai-Heun — logo hub */
+.what-hub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin-top: 48px;
+}
+
+.what-hub__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 760px;
+}
+
+.what-hub .card {
+    aspect-ratio: 4 / 3;
+}
+
+.what-hub__center {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.what-hub__logo {
+    width: 160px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.what-hub__arrow {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    color: var(--accent);
+    opacity: 0.7;
+    pointer-events: none;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+}
+
+.what-hub__arrow--top-right {
+    transform: translate(118px, -118px) rotate(0deg);
+}
+
+.what-hub__arrow--top-left {
+    transform: translate(-118px, -118px) scaleX(-1);
+}
+
+.what-hub__arrow--bottom-right {
+    transform: translate(118px, 118px) scaleY(-1);
+}
+
+.what-hub__arrow--bottom-left {
+    transform: translate(-118px, 118px) scaleX(-1) scaleY(-1);
+}
+
+@media (max-width: 768px) {
+    .what-hub {
+        gap: 24px;
+    }
+    .what-hub__row {
+        gap: 16px;
+    }
+    .what-hub__arrow {
+        display: none;
+    }
+    .what-hub__center {
+        min-height: auto;
+        order: -1;
+    }
+    .what-hub__logo {
+        width: 120px;
+    }
+    .what-hub .card {
+        aspect-ratio: 1 / 1;
+    }
+}
+
 .prose p { margin-bottom: 18px; color: var(--ink-soft); }
 .prose .lede {
     font-family: var(--font-display);
