@@ -1167,6 +1167,92 @@ a { color: inherit; text-decoration: none; }
     border-color: var(--accent);
 }
 
+/* Coaches page */
+.section--coaches {
+    padding-block: 64px;
+}
+
+.coaches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.coach-card {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #dddddd);
+    border-radius: var(--radius, 12px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.coach-card:nth-child(even) {
+    background: var(--bg, #f5f5f5);
+}
+
+.coach-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coach-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text, #111111);
+    margin: 0;
+}
+
+.coach-bio,
+.coach-meta {
+    margin: 0;
+    color: var(--muted, #555555);
+    line-height: 1.6;
+}
+
+.coach-meta {
+    font-weight: 500;
+    color: var(--text, #111111);
+}
+
+.coach-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    padding: 10px 18px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.coach-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.coach-photo {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent, #c1121f), #8a0c16);
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
 @media (max-width: 768px) {
     .hero-carousel {
         height: 50vh;
@@ -1179,6 +1265,29 @@ a { color: inherit; text-decoration: none; }
     .carousel-arrow svg {
         width: 20px;
         height: 20px;
+    }
+
+    .coach-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .coach-info {
+        align-items: center;
+    }
+
+    .coach-whatsapp {
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .coach-photo {
+        width: 100px;
+        height: 100px;
+        font-size: 1.5rem;
     }
 }
 
