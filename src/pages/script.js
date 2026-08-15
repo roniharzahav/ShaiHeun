@@ -182,15 +182,19 @@ import './styles.css';
     };
 
     cards.forEach(card => {
-        if (isHoverable) return; // CSS handles hover
-
-        card.addEventListener('click', () => toggleCard(card));
+        // Keyboard toggling must work on all devices (desktop hover still
+        // relies on CSS, but keyboard users need an explicit trigger).
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 toggleCard(card);
             }
         });
+
+        // Click toggling is only needed on devices without hover.
+        if (!isHoverable) {
+            card.addEventListener('click', () => toggleCard(card));
+        }
     });
 
     // Mark past events
