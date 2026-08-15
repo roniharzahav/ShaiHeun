@@ -1245,6 +1245,10 @@ a { color: inherit; text-decoration: none; }
     margin: 48px 0 0;
 }
 
+.card-wrapper {
+    position: relative;
+}
+
 .card {
     position: relative;
     aspect-ratio: 3 / 4;
@@ -1253,6 +1257,12 @@ a { color: inherit; text-decoration: none; }
     cursor: pointer;
     background: var(--paper-2);
     border: 1px solid var(--line);
+}
+
+.section--why .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .card-image {
@@ -1328,6 +1338,71 @@ a { color: inherit; text-decoration: none; }
     opacity: 1;
 }
 
+/* #why cards expand and float above neighbors */
+.section--why .card.is-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    aspect-ratio: auto;
+    height: auto;
+    max-height: 420px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.section--why .card.is-open .card-body {
+    position: relative;
+    inset: auto;
+    display: block;
+    overflow-y: auto;
+    max-height: 100%;
+    opacity: 1;
+}
+
+.section--why .card.is-open .card-image {
+    filter: brightness(0.4);
+    transform: scale(1.05);
+}
+
+.section--why .card.is-open .card-title {
+    opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .section--why .card:hover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        aspect-ratio: auto;
+        height: auto;
+        max-height: 420px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .section--why .card:hover .card-body {
+        position: relative;
+        inset: auto;
+        display: block;
+        overflow-y: auto;
+        max-height: 100%;
+        opacity: 1;
+    }
+
+    .section--why .card:hover .card-image {
+        filter: brightness(0.4);
+        transform: scale(1.05);
+    }
+
+    .section--why .card:hover .card-title {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 1024px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1340,6 +1415,16 @@ a { color: inherit; text-decoration: none; }
     }
     .card {
         aspect-ratio: 16 / 9;
+    }
+
+    .section--why .card.is-open {
+        max-height: 380px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .section--why .card:hover {
+            max-height: 380px;
+        }
     }
 }
 
