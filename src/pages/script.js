@@ -188,6 +188,9 @@ import './styles.css';
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 toggleCard(card);
+            } else if (e.key === 'Escape') {
+                card.classList.remove('is-open');
+                card.setAttribute('aria-expanded', 'false');
             }
         });
 

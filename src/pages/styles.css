@@ -1262,7 +1262,6 @@ a { color: inherit; text-decoration: none; }
 .section--why .card {
     position: relative;
     width: 100%;
-    height: 100%;
 }
 
 .card-image {
@@ -1358,16 +1357,11 @@ a { color: inherit; text-decoration: none; }
     display: block;
     overflow-y: auto;
     max-height: 100%;
-    opacity: 1;
 }
 
 .section--why .card.is-open .card-image {
-    filter: brightness(0.4);
+    filter: brightness(0.5);
     transform: scale(1.05);
-}
-
-.section--why .card.is-open .card-title {
-    opacity: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1390,16 +1384,11 @@ a { color: inherit; text-decoration: none; }
         display: block;
         overflow-y: auto;
         max-height: 100%;
-        opacity: 1;
     }
 
     .section--why .card:hover .card-image {
-        filter: brightness(0.4);
+        filter: brightness(0.5);
         transform: scale(1.05);
-    }
-
-    .section--why .card:hover .card-title {
-        opacity: 0;
     }
 }
 
@@ -1420,11 +1409,11 @@ a { color: inherit; text-decoration: none; }
     .section--why .card.is-open {
         max-height: 380px;
     }
+}
 
-    @media (hover: hover) and (pointer: fine) {
-        .section--why .card:hover {
-            max-height: 380px;
-        }
+@media (hover: hover) and (pointer: fine) and (max-width: 640px) {
+    .section--why .card:hover {
+        max-height: 380px;
     }
 }
 
